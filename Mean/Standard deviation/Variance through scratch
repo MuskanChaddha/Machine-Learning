@@ -1,0 +1,48 @@
+MEAN_VARIANCE_STANDARD_DEVIATION
+
+import numpy as np
+import math as m
+import matplotlib.pyplot as plt
+
+a=[]
+n=int(input("Enter The Range"))
+i=0
+print("Enter The Number")
+while i<n:
+   l=int(input())
+   a.append(l)
+   i=i+1
+
+print(a)
+
+sum=0
+for i in a:
+    sum=sum+i
+mean =(sum/n)
+print("Mean is ",mean)
+
+
+sum1=0
+for i in range(n):
+   sum1=sum1+((a[i]-mean)**2)
+
+var=sum1/n
+print("Variance is ",var)
+
+sd=m.sqrt(var)
+print("Standard deviation is ",sd)
+print("\n")
+
+
+#NumPY CALCULATIONS through build-in libraries in NumPY:
+
+a=np.array(a)
+print("NP MEAN",np.mean(a))
+
+b=np.var(a)
+print("NP VARIANCE",b)
+
+c=np.std(a)
+print("NP SD",c)
+
+
